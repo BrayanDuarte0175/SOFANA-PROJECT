@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Move-Item -Destination \"C:\\\\Users\\\\Usuario\\\\Desktop\\\\SOFANA\" -Force)",
+      "PowerShell(Remove-Item \"C:\\\\Users\\\\Usuario\\\\Desktop\\\\SOFANA\\\\sofana\" -Recurse -Force -Confirm:$false)"
+    ]
+  }
+}

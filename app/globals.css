@@ -1,0 +1,229 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-display-var);
+  --font-heading: var(--font-display-var);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  /* Tokens temáticos de tenis */
+  --color-ball: var(--ball);
+  --color-ball-foreground: var(--ball-foreground);
+  --color-clay: var(--clay);
+  --color-clay-foreground: var(--clay-foreground);
+  --color-court: var(--court);
+  --color-line: var(--line);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+  /* Blanco de líneas, cálido */
+  --background: oklch(0.985 0.004 120);
+  --foreground: oklch(0.24 0.035 155);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.24 0.035 155);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.24 0.035 155);
+  /* Verde pista */
+  --primary: oklch(0.42 0.08 155);
+  --primary-foreground: oklch(0.985 0.004 120);
+  --secondary: oklch(0.95 0.02 150);
+  --secondary-foreground: oklch(0.32 0.06 155);
+  --muted: oklch(0.955 0.008 140);
+  --muted-foreground: oklch(0.5 0.025 150);
+  --accent: oklch(0.94 0.06 122);
+  --accent-foreground: oklch(0.32 0.06 130);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.91 0.012 145);
+  --input: oklch(0.91 0.012 145);
+  --ring: oklch(0.55 0.1 152);
+  /* Pelota de tenis (lima) — usar siempre con texto oscuro */
+  --ball: oklch(0.87 0.17 122);
+  --ball-foreground: oklch(0.28 0.05 145);
+  /* Tierra batida */
+  --clay: oklch(0.62 0.12 45);
+  --clay-foreground: oklch(0.985 0.004 120);
+  --court: oklch(0.42 0.08 155);
+  --line: oklch(0.985 0.004 120);
+  --chart-1: oklch(0.42 0.08 155);
+  --chart-2: oklch(0.87 0.17 122);
+  --chart-3: oklch(0.62 0.12 45);
+  --chart-4: oklch(0.55 0.1 152);
+  --chart-5: oklch(0.32 0.06 155);
+  --radius: 0.75rem;
+  --sidebar: oklch(0.97 0.008 140);
+  --sidebar-foreground: oklch(0.24 0.035 155);
+  --sidebar-primary: oklch(0.42 0.08 155);
+  --sidebar-primary-foreground: oklch(0.985 0.004 120);
+  --sidebar-accent: oklch(0.94 0.06 122);
+  --sidebar-accent-foreground: oklch(0.32 0.06 130);
+  --sidebar-border: oklch(0.91 0.012 145);
+  --sidebar-ring: oklch(0.55 0.1 152);
+}
+
+.dark {
+  /* Pista nocturna */
+  --background: oklch(0.19 0.022 160);
+  --foreground: oklch(0.96 0.01 120);
+  --card: oklch(0.235 0.026 158);
+  --card-foreground: oklch(0.96 0.01 120);
+  --popover: oklch(0.235 0.026 158);
+  --popover-foreground: oklch(0.96 0.01 120);
+  /* En oscuro la pelota lidera: botones primarios lima con texto oscuro */
+  --primary: oklch(0.87 0.17 122);
+  --primary-foreground: oklch(0.24 0.04 150);
+  --secondary: oklch(0.29 0.03 158);
+  --secondary-foreground: oklch(0.96 0.01 120);
+  --muted: oklch(0.27 0.025 158);
+  --muted-foreground: oklch(0.72 0.02 140);
+  --accent: oklch(0.32 0.045 150);
+  --accent-foreground: oklch(0.92 0.1 122);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 12%);
+  --input: oklch(1 0 0 / 16%);
+  --ring: oklch(0.75 0.13 122);
+  --ball: oklch(0.87 0.17 122);
+  --ball-foreground: oklch(0.24 0.04 150);
+  --clay: oklch(0.66 0.13 45);
+  --clay-foreground: oklch(0.985 0.004 120);
+  --court: oklch(0.3 0.05 156);
+  --line: oklch(0.96 0.01 120);
+  --chart-1: oklch(0.87 0.17 122);
+  --chart-2: oklch(0.66 0.13 45);
+  --chart-3: oklch(0.55 0.1 152);
+  --chart-4: oklch(0.75 0.13 122);
+  --chart-5: oklch(0.96 0.01 120);
+  --sidebar: oklch(0.215 0.024 158);
+  --sidebar-foreground: oklch(0.96 0.01 120);
+  --sidebar-primary: oklch(0.87 0.17 122);
+  --sidebar-primary-foreground: oklch(0.24 0.04 150);
+  --sidebar-accent: oklch(0.32 0.045 150);
+  --sidebar-accent-foreground: oklch(0.92 0.1 122);
+  --sidebar-border: oklch(1 0 0 / 12%);
+  --sidebar-ring: oklch(0.75 0.13 122);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply font-sans;
+  }
+}
+
+@layer utilities {
+  /* Textura sutil de pista: líneas horizontales muy tenues */
+  .court-texture {
+    background-image: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 47px,
+      color-mix(in oklch, var(--foreground) 4%, transparent) 47px,
+      color-mix(in oklch, var(--foreground) 4%, transparent) 48px
+    );
+  }
+
+  /* Oculta la barra de scroll (navegación con desbordamiento) */
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Separador estilo línea de pista: doble línea blanca/clara */
+  .court-line {
+    position: relative;
+    height: 2px;
+    background: color-mix(in oklch, var(--foreground) 14%, transparent);
+  }
+  .court-line::after {
+    content: "";
+    position: absolute;
+    inset-inline: 0;
+    top: 5px;
+    height: 1px;
+    background: color-mix(in oklch, var(--foreground) 8%, transparent);
+  }
+}
+
+/* Bote de pelota (loader) */
+@keyframes sofana-bounce {
+  0%, 100% {
+    transform: translateY(0) scaleX(1) scaleY(1);
+    animation-timing-function: ease-out;
+  }
+  45% {
+    transform: translateY(26px) scaleX(1) scaleY(1);
+    animation-timing-function: ease-in;
+  }
+  50% {
+    transform: translateY(28px) scaleX(1.25) scaleY(0.75);
+    animation-timing-function: ease-out;
+  }
+  55% {
+    transform: translateY(26px) scaleX(1) scaleY(1);
+    animation-timing-function: ease-out;
+  }
+}
+
+@keyframes sofana-shadow {
+  0%, 100% { transform: scaleX(0.55); opacity: 0.25; }
+  50% { transform: scaleX(1); opacity: 0.45; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
